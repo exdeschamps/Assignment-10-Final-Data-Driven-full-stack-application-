@@ -5,7 +5,7 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
-// Use automatic initialization
+// Use automatic initialization for Firebase client-side SDK
 // https://firebase.google.com/docs/app-hosting/firebase-sdks#initialize-with-no-arguments
 export const firebaseApp = initializeApp();
 
