@@ -26,6 +26,18 @@ export default async function Home(props) {
     params.id
   );
 
+  // Handle case where album doesn't exist
+  if (!album) {
+    return (
+      <main className="main__restaurant">
+        <div style={{ padding: "40px", textAlign: "center" }}>
+          <h2>Album not found</h2>
+          <p>The album you're looking for doesn't exist.</p>
+        </div>
+      </main>
+    );
+  }
+
   return (
     <main className="main__restaurant">
       <Album

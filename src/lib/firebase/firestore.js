@@ -202,6 +202,10 @@ export async function getAlbumById(db, albumId) {
   const docRef = doc(db, "albums", albumId); // document reference
   // fetch the document snapshot
   const docSnap = await getDoc(docRef); // get document data
+  // check if document exists before accessing data
+  if (!docSnap.exists()) {
+    return null; // return null if document doesn't exist
+  }
   // return plain object with converted timestamp
   return {
     ...docSnap.data(),
