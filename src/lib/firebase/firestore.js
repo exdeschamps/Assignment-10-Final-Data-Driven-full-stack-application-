@@ -271,7 +271,7 @@ export async function getReviewsByAlbumId(db, albumId) {
   });
 }
 
-// subscribe to realtime updates for reviews of an album
+// function subscribe to realtime updates for reviews of an album
 export function getReviewsSnapshotByAlbumId(albumId, cb) {
   // validate input
   if (!albumId) {
