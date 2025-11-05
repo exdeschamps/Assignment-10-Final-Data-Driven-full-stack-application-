@@ -220,7 +220,7 @@ export async function getAlbumById(db, albumId) {
  * @param {(data: object|null) => void} cb - Callback invoked with the album data
  * @returns {function()} unsubscribe function returned by onSnapshot
  */
-// subscribe to realtime updates for a single album
+// function subscribes to realtime updates for a single album
 export function getAlbumSnapshotById(albumId, cb) {
   // validate input
   if (!albumId) {
